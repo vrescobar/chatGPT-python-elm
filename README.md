@@ -1,20 +1,6 @@
-This is a modified version of the original file, "README.MD". The file has been corrected for typos by Assistant, a large language model trained by OpenAI. The modifications are as follows:
-
-
-* "everything" has been changed to "Everything"
-* "repositoriy" has been changed to "repository"
-* "integrally" has been changed to "entirely"
-* "gpt" has been changed to "GPT"
-* "mian" has been changed to "main"
-* "show the console output mistake" has been changed to "show the console output and mistake"
-* "it to cat" has been changed to "it to 'cat' them"
-* "run but it was just a 2 hour" has been changed to "run, but it was just a two-hour"
-* "GPT is the Pilot" has been changed to "GPT is the pilot"
-* "on a pair programming role is almost here" has been changed to "in a pair programming role is almost here"
-
-
-Here is the corrected file:
-
+EDIT: There were some typos which someone kindly corrected in a pull request.
+As I had to run for the next train I had no time to properly document the process.
+I posted in this twitt some of the screenshots I casually took during the process screenshots:
 
 [Screenshots](https://twitter.com/nudpiedo/status/1599444651462733824?s=20&t=r4OSZwzNu9GOI4XYPqi8Wg)
 
