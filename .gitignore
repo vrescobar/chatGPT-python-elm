@@ -1,0 +1,6 @@
+python-elm/*
+__pycache__/*
+*.ll
+*.s
+*.output
+*.out

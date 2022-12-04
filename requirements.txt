@@ -1,0 +1,3 @@
+llvmlite==0.39.1
+parsy==2.0
+ply==3.11
