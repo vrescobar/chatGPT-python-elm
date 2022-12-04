@@ -18,6 +18,12 @@ from elm_types import (
 )
 
 # Grammar
+# List of operator precedence rules
+# (order matters)
+precedence = (
+    ('right', 'UMINUS'),
+    ('right', 'NOT'),
+)
 
 
 def p_program(p):
@@ -122,12 +128,13 @@ def p_expression_binop(p):
     """
     p[0] = BinOp(p[2], p[1], p[3])
 
+def p_expression_not(p):
+    'expression : NOT expression'
+    p[0] = UnOp('not', p[2])
 
 def p_expression_unop(p):
-    """
-    expression : UMINUS expression
-    """
-    p[0] = UnOp(p[1], p[2])
+    'expression : UMINUS expression'
+    p[0] = UnOp('-', p[2])
 
 
 def p_expression_let(p):
@@ -172,10 +179,13 @@ def p_expression_match(p):
     p[0] = Match(p[2], p[4])
 
 
-def p_match_expr_list(p):
+def p_match_expr_list_single(p):
+    "match_expr_list : match_expr"
+    p[0] = [p[1]]
+
+def p_match_expr_list_multiple(p):
     "match_expr_list : match_expr_list match_expr"
     p[0] = p[1] + [p[2]]
-
 
 def p_match_expr(p):
     "match_expr : BAR pattern ARROW expression"
@@ -255,8 +265,19 @@ def parse(text: str) -> Program:
     Returns:
         Program: The AST representation of the code.
     """
-    # Define the token list for the parser.
+    # implement the yacc parser with the tokens, lexer , precedence and grammar
+    # defined above
+    # use the yacc.parse() method to parse the text
+    # return the result
     parser = yacc.yacc()
-    return parser.parse(text, lexer=lexer, debug=False, tracking=True, tokenfunc=tokens)
+    return parser.parse(text, lexer=lexer)
+
+# parser = yacc.yacc()
+#     return parser(text,
+#                     lexer=lexer,
+#                     tokenfunc=tokens, 
+#                     precedence=precedence,
+#                     debug=False,
+#                     tracking=True)
 
 

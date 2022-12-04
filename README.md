@@ -29,7 +29,7 @@ Copy code
 
 Run tests:
 
-    $ python3 -m unittest discover -s tests
+    $ pytest
 
 Copy code
 

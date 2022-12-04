@@ -28,9 +28,8 @@ tokens = (
     "BAR",
     "ARROW",
     "LAMBDA",
-    # "MINUS",
-    "UMINUS"
     "NOT",
+    "UMINUS",
     "IDENT",
     "COMMA",
     "COLON",
@@ -60,8 +59,7 @@ t_WITH = r"with"
 t_BAR = r"\|"
 t_ARROW = r"->"
 t_LAMBDA = r"\\"
-# t_MINUS = r"\-"
-# t_NOT = r"!"
+
 
 
 # A string containing ignored characters (spaces and tabs)
@@ -74,12 +72,14 @@ def t_UMINUS(t):
     if t.lexer.peek() in "0123456789":
         return t
 
-
 def t_INTEGER(t):
     r"\d+"
     t.value = int(t.value)
     return t
 
+def t_NOT(t):
+    r'not'
+    return t
 
 def t_FLOAT(t):
     r"\d+\.\d+"
@@ -122,3 +122,4 @@ def t_error(t):
 
 # Build the lexer
 lexer = lex.lex()
+
