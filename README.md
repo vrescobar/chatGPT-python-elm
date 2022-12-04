@@ -1,3 +1,6 @@
+EDIT: There were some typos which someone kindly corrected in a pull request. As I had to run for the next train I had no time to properly document the process. I posted in this twitt some of the screenshots I casually took during the process
+[screenshots](https://twitter.com/nudpiedo/status/1599444651462733824?s=20&t=r4OSZwzNu9GOI4XYPqi8Wg)
+
 NOTE: EVERYTHING this repositoriy with the exception of this own note has been
 generated integrally with chatGPT and asked gradually how to correct or refactor each one
 of the errors that showed up on the terminal.
